@@ -1,0 +1,552 @@
+.elegant {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:large;
+    font-weight: bold;
+    font-style:oblique;
+    color:rgb(48, 68, 48);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-left:200px;
+  }
+  
+  .column {
+    flex: 25%;
+    padding: 0 4px;
+    margin-right: 0px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+.topnav {
+  overflow: hidden;
+  background-color:rgb(48, 68, 48);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 50px 40px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ddd;
+  color:black;
+}
+
+:root {
+  --red: rgb(209, 3, 3);
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  font-family: "Helvetica";
+  background: #e9e9e9;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.gallery .image{
+  width: calc(100% / 4);
+  padding: 10px;
+  margin-bottom: 36px;
+}
+.gallery .image span{
+  display: flex;
+  column-gap: 25px;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+
+.like-button1 {
+  display:inline-block;
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(48, 68, 48);
+  margin-left: 32px;
+  margin-top: 32px;
+  margin-right: 50px;
+}
+  .like-button1::before {
+    font-size: 3em;
+    color: rgb(48, 68, 48);
+    content: "\2764";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .like-button1::after {
+    font-size: 3em;
+    color: rgb(214, 75, 98);
+    content: "\2764";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+  }
+  .liked1::after {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .like-button2 {
+    display:inline-block;
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(48, 68, 48);
+    margin-left: 32px;
+    margin-top: 32px;
+    margin-right: 50px;
+  }
+    .like-button2::before {
+      font-size: 3em;
+      color: rgb(48, 68, 48);
+      content: "\2764";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .like-button2::after {
+      font-size: 3em;
+      color: rgb(214, 75, 98);
+      content: "\2764";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.2s;
+    }
+    .liked2::after {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .like-button3 {
+      display:inline-block;
+      position: relative;
+      font-size: 20px;
+      cursor: pointer;
+      border: 1px solid rgb(48, 68, 48);
+      margin-left: 32px;
+      margin-top: 32px;
+      margin-right: 50px;
+    }
+      .like-button3::before {
+        font-size: 3em;
+        color: rgb(48, 68, 48);
+        content: "\2764";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .like-button3::after {
+        font-size: 3em;
+        color: rgb(214, 75, 98);
+        content: "\2764";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.2s;
+      }
+      .liked3::after {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+
+      .like-button4 {
+        display:inline-block;
+        position: relative;
+        font-size: 20px;
+        cursor: pointer;
+        border: 1px solid rgb(48, 68, 48);
+        margin-left: 32px;
+        margin-top: 32px;
+        margin-right: 50px;
+      }
+        .like-button4::before {
+          font-size: 3em;
+          color: rgb(48, 68, 48);
+          content:"\2764";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .like-button4::after {
+          font-size: 3em;
+          color: rgb(214, 75, 98);
+          content: "\2764";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          transition: transform 0.2s;
+        }
+        .liked4::after {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .like-button5 {
+          display:inline-block;
+          position: relative;
+          font-size: 20px;
+          cursor: pointer;
+          border: 1px solid rgb(48, 68, 48);
+          margin-left: 32px;
+          margin-top: 32px;
+          margin-right: 50px;
+        }
+          .like-button5::before {
+            font-size: 3em;
+            color: rgb(48, 68, 48);
+            content: "\2764";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .like-button5::after {
+            font-size: 3em;
+            color: rgb(214, 75, 98);
+            content: "\2764";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.2s;
+          }
+          .liked5::after {
+            transform: translate(-50%, -50%) scale(1.1);
+          }
+
+          .like-button6 {
+            display:inline-block;
+            position: relative;
+            font-size: 20px;
+            cursor: pointer;
+            border: 1px solid rgb(48, 68, 48);
+            margin-left: 32px;
+            margin-top: 32px;
+            margin-right: 50px;
+          }
+            .like-button6::before {
+              font-size: 3em;
+              color: rgb(48, 68, 48);
+              content: "\2764";
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+            .like-button6::after {
+              font-size: 3em;
+              color: rgb(214, 75, 98);
+              content: "\2764";
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%) scale(0);
+              transition: transform 0.2s;
+            }
+            .liked6::after {
+              transform: translate(-50%, -50%) scale(1.1);
+            }
+
+            .like-button7 {
+              display:inline-block;
+              position: relative;
+              font-size: 20px;
+              cursor: pointer;
+              border: 1px solid rgb(48, 68, 48);
+              margin-left: 32px;
+              margin-top: 32px;
+              margin-right: 50px;
+            }
+              .like-button7::before {
+                font-size: 3em;
+                color: rgb(48, 68, 48);
+                content: "\2764";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+              .like-button7::after {
+                font-size: 3em;
+                color: rgb(214, 75, 98);
+                content: "\2764";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform 0.2s;
+              }
+              .liked7::after {
+                transform: translate(-50%, -50%) scale(1.1);
+              }
+
+              .like-button8 {
+                display:inline-block;
+                position: relative;
+                font-size: 20px;
+                cursor: pointer;
+                border: 1px solid rgb(48, 68, 48);
+                margin-left: 32px;
+                margin-top: 32px;
+                margin-right: 50px;
+              }
+                .like-button8::before {
+                  font-size: 3em;
+                  color: rgb(48, 68, 48);
+                  content: "\2764";
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%);
+                }
+                .like-button8::after {
+                  font-size: 3em;
+                  color: rgb(214, 75, 98);
+                  content: "\2764";
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%) scale(0);
+                  transition: transform 0.2s;
+                }
+                .liked8::after {
+                  transform: translate(-50%, -50%) scale(1.1);
+                }
+
+                .like-button9 {
+                  display:inline-block;
+                  position: relative;
+                  font-size: 20px;
+                  cursor: pointer;
+                  border: 1px solid rgb(48, 68, 48);
+                  margin-left: 32px;
+                  margin-top: 32px;
+                  margin-right: 50px;
+                }
+                  .like-button9::before {
+                    font-size: 3em;
+                    color: rgb(48, 68, 48);
+                    content: "\2764";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                  .like-button9::after {
+                    font-size: 3em;
+                    color: rgb(214, 75, 98);
+                    content: "\2764";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%) scale(0);
+                    transition: transform 0.2s;
+                  }
+                  .liked9::after {
+                    transform: translate(-50%, -50%) scale(1.1);
+                  }
+
+                  .like-button10 {
+                    display:inline-block;
+                    position: relative;
+                    font-size: 20px;
+                    cursor: pointer;
+                    border: 1px solid rgb(48, 68, 48);
+                    margin-left: 32px;
+                    margin-top: 32px;
+                    margin-right: 50px;
+                  }
+                    .like-button10::before {
+                      font-size: 3em;
+                      color: rgb(48, 68, 48);
+                      content: "\2764";
+                      position: absolute;
+                      left: 50%;
+                      top: 50%;
+                      transform: translate(-50%, -50%);
+                    }
+                    .like-button10::after {
+                      font-size: 3em;
+                      color: rgb(214, 75, 98);
+                      content: "\2764";
+                      position: absolute;
+                      left: 50%;
+                      top: 50%;
+                      transform: translate(-50%, -50%) scale(0);
+                      transition: transform 0.2s;
+                    }
+                    .liked10::after {
+                      transform: translate(-50%, -50%) scale(1.1);
+                    }
+
+                    .like-button11 {
+                      display:inline-block;
+                      position: relative;
+                      font-size: 20px;
+                      cursor: pointer;
+                      border: 1px solid rgb(48, 68, 48);
+                      margin-left: 32px;
+                      margin-top: 32px;
+                      margin-right: 50px;
+                    }
+                      .like-button11::before {
+                        font-size: 3em;
+                        color: rgb(48, 68, 48);
+                        content: "\2764";
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                      }
+                      .like-button11::after {
+                        font-size: 3em;
+                        color: rgb(214, 75, 98);
+                        content: "\2764";
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%) scale(0);
+                        transition: transform 0.2s;
+                      }
+                      .liked11::after {
+                        transform: translate(-50%, -50%) scale(1.1);
+                      }
+
+                      .like-button12 {
+                        display:inline-block;
+                        position: relative;
+                        font-size: 20px;
+                        cursor: pointer;
+                        border: 1px solid rgb(48, 68, 48);
+                        margin-left: 32px;
+                        margin-top: 32px;
+                        margin-right: 50px;
+                      }
+                        .like-button12::before {
+                          font-size: 3em;
+                          color: rgb(48, 68, 48);
+                          content: "\2764";
+                          position: absolute;
+                          left: 50%;
+                          top: 50%;
+                          transform: translate(-50%, -50%);
+                        }
+                        .like-button12::after {
+                          font-size: 3em;
+                          color: rgb(214, 75, 98);
+                          content: "\2764";
+                          position: absolute;
+                          left: 50%;
+                          top: 50%;
+                          transform: translate(-50%, -50%) scale(0);
+                          transition: transform 0.2s;
+                        }
+                        .liked12::after {
+                          transform: translate(-50%, -50%) scale(1.1);
+                        }

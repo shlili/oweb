@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background: #f1f1f1;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color:rgb(48, 68, 48);
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 50px 40px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #ddd;
+    color:black;
+  }
+
+  .header {
+    padding: 100px;
+    text-align: center;
+    background: url("https://www.menatti.com/app/uploads/2019/12/cibo-italiano-food-igp-dop-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 30px;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 65%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 35%;
+    padding-left: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .title {
+    color:rgb(48, 68, 48);
+  }
