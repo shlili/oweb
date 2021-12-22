@@ -162,7 +162,8 @@ body {
   cursor: pointer;
   border: 1px solid rgb(48, 68, 48);
   margin-left: 32px;
-  margin-top: 32px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   margin-right: 50px;
 }
   .like-button1::before {
@@ -195,7 +196,8 @@ body {
     cursor: pointer;
     border: 1px solid rgb(48, 68, 48);
     margin-left: 32px;
-    margin-top: 32px;
+    margin-top: 15px;
+  margin-bottom: 15px;
     margin-right: 50px;
   }
     .like-button2::before {
@@ -228,7 +230,8 @@ body {
       cursor: pointer;
       border: 1px solid rgb(48, 68, 48);
       margin-left: 32px;
-      margin-top: 32px;
+      margin-top: 15px;
+  margin-bottom: 15px;
       margin-right: 50px;
     }
       .like-button3::before {
@@ -261,7 +264,8 @@ body {
         cursor: pointer;
         border: 1px solid rgb(48, 68, 48);
         margin-left: 32px;
-        margin-top: 32px;
+        margin-top: 15px;
+  margin-bottom: 15px;
         margin-right: 50px;
       }
         .like-button4::before {
@@ -294,7 +298,8 @@ body {
           cursor: pointer;
           border: 1px solid rgb(48, 68, 48);
           margin-left: 32px;
-          margin-top: 32px;
+          margin-top: 15px;
+  margin-bottom: 15px;
           margin-right: 50px;
         }
           .like-button5::before {
@@ -327,7 +332,8 @@ body {
             cursor: pointer;
             border: 1px solid rgb(48, 68, 48);
             margin-left: 32px;
-            margin-top: 32px;
+            margin-top: 15px;
+  margin-bottom: 15px;
             margin-right: 50px;
           }
             .like-button6::before {
@@ -360,7 +366,8 @@ body {
               cursor: pointer;
               border: 1px solid rgb(48, 68, 48);
               margin-left: 32px;
-              margin-top: 32px;
+              margin-top: 15px;
+  margin-bottom: 15px;
               margin-right: 50px;
             }
               .like-button7::before {
@@ -393,7 +400,8 @@ body {
                 cursor: pointer;
                 border: 1px solid rgb(48, 68, 48);
                 margin-left: 32px;
-                margin-top: 32px;
+                margin-top: 15px;
+  margin-bottom: 15px;
                 margin-right: 50px;
               }
                 .like-button8::before {
@@ -426,7 +434,8 @@ body {
                   cursor: pointer;
                   border: 1px solid rgb(48, 68, 48);
                   margin-left: 32px;
-                  margin-top: 32px;
+                  margin-top: 15px;
+  margin-bottom: 15px;
                   margin-right: 50px;
                 }
                   .like-button9::before {
@@ -459,7 +468,8 @@ body {
                     cursor: pointer;
                     border: 1px solid rgb(48, 68, 48);
                     margin-left: 32px;
-                    margin-top: 32px;
+                    margin-top: 15px;
+  margin-bottom: 15px;
                     margin-right: 50px;
                   }
                     .like-button10::before {
@@ -492,7 +502,8 @@ body {
                       cursor: pointer;
                       border: 1px solid rgb(48, 68, 48);
                       margin-left: 32px;
-                      margin-top: 32px;
+                      margin-top: 15px;
+  margin-bottom: 15px;
                       margin-right: 50px;
                     }
                       .like-button11::before {
@@ -525,7 +536,8 @@ body {
                         cursor: pointer;
                         border: 1px solid rgb(48, 68, 48);
                         margin-left: 32px;
-                        margin-top: 32px;
+                        margin-top: 15px;
+  margin-bottom: 15px;
                         margin-right: 50px;
                       }
                         .like-button12::before {
@@ -550,3 +562,20 @@ body {
                         .liked12::after {
                           transform: translate(-50%, -50%) scale(1.1);
                         }
+
+
+
+input.com {
+  opacity: 0.8;
+  background-color: rgb(48, 68, 48);
+  height: 25px;
+  width: 356px;
+  color: beige;
+  border-color: 1px rgb(48, 68, 48);
+  border-style: double;
+}
+input.com:hover {
+  opacity: 1.0;
+}
+
+

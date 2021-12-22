@@ -5,9 +5,66 @@
         <link rel = "icon" href = "avatar.png" type = "image/x-icon">
         <style type = "text/css"></style>
         <link rel="stylesheet" href="cooking.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+            </script>
+            <script>
+                $(document).ready(function(){
+                  $("#myInputDisplay").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#submittedDiv *").filter(function() {
+                    $(this).toggle($(this).parent().text().toLowerCase().indexOf(value) > -1)
+                    });
+                  });
+                });
+                $(document).ready(function(){
+                  $("#myInputHide").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#submittedDiv *").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) == -1)
+                    });
+                  });
+                });
+
+                const onLoad = () => {
+                let arr = []
+                arr = JSON.parse(localStorage.getItem('posts')) || [];
+                let tempString = "";
+                arr.forEach(element => {
+                    tempString += element
+                    //tempString += "<hr>"
+                })
+            document.getElementById("submittedDiv").innerHTML = tempString;
+            }
+            
+            function blogPost() {
+                event.preventDefault()
+                let blogTxt = document.getElementById("blogTxt").value
+                let blogAlias = document.getElementById("blogAlias").value
+                let blogSbj = document.getElementById("blogSbj").value
+                let submittedDiv = document.getElementById("submittedDiv")
+                let posts = JSON.parse(localStorage.getItem('posts')) || [];
+                let blogDate = document.getElementById("blogDate").value
+                
+                let htmlString = "<div><h2 id='subject'> Title:" + blogSbj + "</h2>" + 
+                '<p id="content" style="word-wrap: break-word;">' + blogTxt + "</p>" + 
+                "<p id='ime'> Written by: " + blogAlias + "</p>" + "<p id='date'> Date:" + blogDate + "</p><hr></div>"
+
+                posts.push(htmlString)
+                localStorage.setItem('posts', JSON.stringify(posts))
+                let newString = "";
+                posts.forEach(element => {
+                    newString += element
+                    //newString += "<hr>"
+                });
+                submittedDiv.innerHTML = newString
+                console.log("posts = " + posts)
+            }
+            </script>
     </head>
 
-    <body>
+    <body onload="onLoad()">
         <div class="topnav">
             <img src="Lily's blog.png" align="left" width=9% height=15% style="opacity: 100%;">
             <a href="lilys personal blog.html">Home</a>
@@ -18,8 +75,33 @@
           </div>
           <div class="header"></div>
 
+          <div id="elBlog">
+                <form id="blog-form" onsubmit="blogPost()">
+                  <center><h2 class="boxblogp">Share a recipe.<br></h2></center>
+                    <textarea id="blogTxt" class="writing" placeholder="Write your recipe here!"></textarea>
+                    <input id="blogAlias" type="text" class="blog-f" name="alias" placeholder="Author">
+                    <input id="blogSbj" type="text" class="blog-f" name="subject" placeholder="Recipe name">
+                    <input id="blogDate" type="date" class="blog-f" name="date-w" value="xxxx-xx-xx" min="2020-01-01"
+                        max="2022-12-31">
+                    <button id="submit" type="submit">Submit</button>
+                
+                <div id="SearchSub">
+                    <div id="searchDiv">
+                        <input id="myInputDisplay" type="text" placeholder="Search">
+                        <input id="myInputHide" type="text" placeholder="Remove recipe from view">
+                    </div>
 
-          <div class="row">
+                    <div id="submittedDiv">
+    
+                    </div>
+
+                </div></form>
+        </div>
+        <div>
+          
+        </div>
+
+         <!-- <div class="row">
 
             <div class="leftcolumn">
 
@@ -69,7 +151,7 @@
                     9. Add some of the tomato mixture on top of the toasted bread slices and serve immediately.<br></p>
               </div>
 
-            </div> <!--left column-->
+            </div> 
 
             <div class="rightcolumn">
 
@@ -95,7 +177,7 @@
 
             
 
-          </div>
+          </div>-->
     </body>
 
 </html>

@@ -6,9 +6,11 @@
         <style type = "text/css"></style>
         <style type = "JavaScript/css"></style>
         <link rel="stylesheet" href="travel.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     </head>
 
-<body>
+<body onload="onLoad()">
   <div class="topnav">
     <img src="Lily's blog.png" align="left" width=9% height=15% style="opacity: 100%;">
     <a href="lilys personal blog.html">Home</a>
@@ -19,18 +21,102 @@
   </div>
   <div class="wrapper">
       <div class="gallery">
-        <div class="image" ><span><img src="1.png" alt=""></span><P class="elegant">Caption: Old building - Verona</P><p class="elegant"><button class="like-button1" type="button" onClick="onClick1()"></button>Likes: <a id="totalLikes1" > 0 </a></p></div>
-        <div class="image" ><span><img src="2.png" alt=""></span><P class="elegant">Caption: Architecture - Vienna</P><p class="elegant"><button class="like-button2" type="button" onClick="onClick2()"></button>Likes: <a id="totalLikes2">0</a></p></div>
-        <div class="image" ><span><img src="3.png" alt=""></span><P class="elegant">Caption: Into the Blue - Tossa de Mar</P><p class="elegant"><button class="like-button3" type="button" onClick="onClick3()"></button>Likes: <a id="totalLikes3">0</a></p></div>
-        <div class="image" ><span><img src="4.png" alt=""></span><P class="elegant">Caption: Breathtaking view - Monte Carlo, Monaco</P><p class="elegant"><button class="like-button4" type="button" onClick="onClick4()"></button>Likes: <a id="totalLikes4">0</a></p></div>
-        <div class="image" ><span><img src="5.png" alt=""></span><P class="elegant">Caption: House of Juliet - Verona</P><p class="elegant"><button class="like-button5" type="button" onClick="onClick5()"></button>Likes: <a id="totalLikes5">0</a></p></div>
-        <div class="image" ><span><img src="6.png" alt=""></span><P class="elegant">Caption: Roses - Vienna</P><p class="elegant"><button class="like-button6" type="button" onClick="onClick6()"></button>Likes: <a id="totalLikes6">0</a></p></div>
-        <div class="image" ><span><img src="7.png" alt=""></span><P class="elegant">Caption: Streets - Ljubljana</P><p class="elegant"><button class="like-button7" type="button" onClick="onClick7()"></button>Likes: <a id="totalLikes7">0</a></p></div>
-        <div class="image" ><span><img src="8.png" alt=""></span><P class="elegant">Caption: BUDA FCKN PEST - Budapest</P><p class="elegant"><button class="like-button8" type="button" onClick="onClick8()"></button>Likes: <a id="totalLikes8">0</a></p></div>
-        <div class="image" ><span><img src="9.png" alt=""></span><P class="elegant">Caption: Street sign - Prague</P><p class="elegant"><button class="like-button9" type="button" onClick="onClick9()"></button>Likes: <a id="totalLikes9">0</a></p></div>
-        <div class="image" ><span><img src="10.png" alt=""></span><P class="elegant">Caption: Secondhand bookshop - Ljubljana</P><p class="elegant"><button class="like-button10" type="button" onClick="onClick10()"></button>Likes: <a id="totalLikes10">0</a></p></div>
-        <div class="image" ><span><img src="11.png" alt=""></span><P class="elegant">Caption: Parc de la Ciutadella - Barcelona</P><p class="elegant"><button class="like-button11" type="button" onClick="onClick11()"></button>Likes: <a id="totalLikes11">0</a></p></div>
-        <div class="image" ><span><img src="12.png" alt=""></span><P class="elegant">Caption: What a view - Nice</P><p class="elegant"><button class="like-button12" type="button" onClick="onClick12()"></button>Likes: <a id="totalLikes12">0</a></p></div>
+        <div class="image" ><span><img src="1.png" alt=""></span><P class="elegant">Caption: Old building - Verona</P><p class="elegant"><button class="like-button1" type="button" onClick="onClick1()"></button>Likes: <a id="totalLikes1" > 0 </a>
+          <div id="box">
+            <p id="comment1"></p>
+            <form onsubmit="comment1()">
+                <input class="com" type="text" id="input1" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="2.png" alt=""></span><P class="elegant">Caption: Architecture - Vienna</P><p class="elegant"><button class="like-button2" type="button" onClick="onClick2()"></button>Likes: <a id="totalLikes2">0</a>
+          <div id="box">
+            <p id="comment2" ></p>
+            <form onsubmit="comment2()">
+                <input class="com" type="text" id="input2" placeholder="Enter comment" autocapitalize="off"/>
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="3.png" alt=""></span><P class="elegant">Caption: Into the Blue - Tossa de Mar</P><p class="elegant"><button class="like-button3" type="button" onClick="onClick3()"></button>Likes: <a id="totalLikes3">0</a>
+          <div id="box">
+            <p id="comment3"></p>
+            <form onsubmit="comment3()">
+                <input class="com" type="text" id="input3" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="4.png" alt=""></span><P class="elegant">Caption: Breathtaking view - Monte Carlo, Monaco</P><p class="elegant"><button class="like-button4" type="button" onClick="onClick4()"></button>Likes: <a id="totalLikes4">0</a>
+          <div id="box">
+            <p id="comment4"></p>
+            <form onsubmit="comment4()">
+                <input class="com" type="text" id="input4" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="5.png" alt=""></span><P class="elegant">Caption: House of Juliet - Verona</P><p class="elegant"><button class="like-button5" type="button" onClick="onClick5()"></button>Likes: <a id="totalLikes5">0</a>
+          <div id="box">
+            <p id="comment5"></p>
+            <form onsubmit="comment5()">
+                <input class="com" type="text" id="input5" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="6.png" alt=""></span><P class="elegant">Caption: Roses - Vienna</P><p class="elegant"><button class="like-button6" type="button" onClick="onClick6()"></button>Likes: <a id="totalLikes6">0</a>
+          <div id="box">
+            <p id="comment6"></p>
+            <form onsubmit="comment6()">
+                <input class="com" type="text" id="input6" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="7.png" alt=""></span><P class="elegant">Caption: Streets - Ljubljana</P><p class="elegant"><button class="like-button7" type="button" onClick="onClick7()"></button>Likes: <a id="totalLikes7">0</a>
+          <div id="box">
+            <p id="comment7"></p>
+            <form onsubmit="comment7()">
+                <input class="com" type="text" id="input7" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="8.png" alt=""></span><P class="elegant">Caption: BUDA FCKN PEST - Budapest</P><p class="elegant"><button class="like-button8" type="button" onClick="onClick8()"></button>Likes: <a id="totalLikes8">0</a>
+          <div id="box">
+            <p id="comment8"></p>
+            <form onsubmit="comment8()">
+                <input class="com" type="text" id="input8" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="9.png" alt=""></span><P class="elegant">Caption: Street sign - Prague</P><p class="elegant"><button class="like-button9" type="button" onClick="onClick9()"></button>Likes: <a id="totalLikes9">0</a>
+          <div id="box">
+            <p id="comment9"></p>
+            <form onsubmit="comment9()">
+                <input class="com" type="text" id="input9" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="10.png" alt=""></span><P class="elegant">Caption: Secondhand bookshop - Ljubljana</P><p class="elegant"><button class="like-button10" type="button" onClick="onClick10()"></button>Likes: <a id="totalLikes10">0</a>
+          <div id="box">
+            <p id="comment10"></p>
+            <form onsubmit="comment10()">
+                <input class="com" type="text" id="input10" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="11.png" alt=""></span><P class="elegant">Caption: Parc de la Ciutadella - Barcelona</P><p class="elegant"><button class="like-button11" type="button" onClick="onClick11()"></button>Likes: <a id="totalLikes11">0</a>
+          <div id="box">
+            <p id="comment11"></p>
+            <form onsubmit="comment11()">
+                <input class="com" type="text" id="input11" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
+        <div class="image" ><span><img src="12.png" alt=""></span><P class="elegant">Caption: What a view - Nice</P><p class="elegant"><button class="like-button12" type="button" onClick="onClick12()"></button>Likes: <a id="totalLikes12">0</a>
+          <div id="box">
+            <p id="comment12"></p>
+            <form onsubmit="comment12()">
+                <input class="com" type="text" id="input12" placeholder="Enter comment" autocapitalize="off" />
+                <input class="com" type="submit" id="submitbutton" value="Add comment">
+            </form>
+        </div></p></div>
       </div>
     </div>
 

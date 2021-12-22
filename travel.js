@@ -203,3 +203,379 @@ var a12=0;
   document.querySelector('.like-button12').addEventListener('click', (e) => {
     e.currentTarget.classList.toggle('liked12');
   });
+
+ 
+
+
+  var guest = prompt("Hello", "Please enter your name here");
+            
+            const onLoad = () => {
+                let json1 = [];
+                let string1 = "";
+                if (localStorage.getItem('comments1')) {
+                    json1 = JSON.parse(localStorage.getItem('comments1'));
+                    string1 = "";
+                    for (var i = 0; i < json1.length; i++) {
+                        var obj1 = json1[i];
+                        let st1 = JSON.stringify(obj1);
+                        string1 += st1;
+                        string1 += "<hr>";
+                    }
+                }
+                document.getElementById("comment1").innerHTML = string1;
+            }
+            function comment1() {
+                event.preventDefault()
+                let t1 = document.getElementById("input1").value;
+                let comm1 = JSON.parse(localStorage.getItem('comments1')) || [];
+                var datum1 = new Date();
+                t1 = guest + ': ' + t1 + '<br>' + datum1.toUTCString();
+                comm1.push(t1)
+                localStorage.setItem('comments1', JSON.stringify(comm1))
+                console.log(comm1)
+                let newString1 = ""
+                comm1.forEach(element => {
+                    newString1 += element
+                    newString1 += "<hr>"
+                });
+                document.getElementById("comment1").innerHTML = newString1;
+
+                let json2 = [];
+                let string2 = "";
+                if (localStorage.getItem('comments2')) {
+                    json2 = JSON.parse(localStorage.getItem('comments2'));
+                    string2 = "";
+                    for (var i = 0; i < json2.length; i++) {
+                        var obj2 = json2[i];
+                        let st2 = JSON.stringify(obj2);
+                        string2 += st2;
+                        string2 += "<hr>";
+                    }
+                }
+                document.getElementById("comment2").innerHTML = string2;
+            }
+            function comment2() {
+                event.preventDefault()
+                let t2 = document.getElementById("input2").value;
+                let comm2 = JSON.parse(localStorage.getItem('comments2')) || [];
+                var datum2 = new Date();
+                t2 = guest + ': ' + t2 + '<br>' + datum2.toUTCString();
+                comm2.push(t2)
+                localStorage.setItem('comments2', JSON.stringify(comm2))
+                console.log(comm2)
+                let newString2 = ""
+                comm2.forEach(element => {
+                    newString2 += element
+                    newString2 += "<hr>"
+                });
+                document.getElementById("comment2").innerHTML = newString2;
+            }
+
+            let json3 = [];
+                let string3 = "";
+                if (localStorage.getItem('comments3')) {
+                    json3 = JSON.parse(localStorage.getItem('comments3'));
+                    string3 = "";
+                    for (var i = 0; i < json3.length; i++) {
+                        var obj3 = json3[i];
+                        let st3 = JSON.stringify(obj3);
+                        string3 += st3;
+                        string3 += "<hr>";
+                    }
+                }
+                document.getElementById("comment3").innerHTML = string3;
+            
+            function comment3() {
+                event.preventDefault()
+                let t3 = document.getElementById("input3").value;
+                let comm3 = JSON.parse(localStorage.getItem('comments3')) || [];
+                var datum3 = new Date();
+                t3 = guest + ': ' + t3 + '<br>' + datum3.toUTCString();
+                comm3.push(t3)
+                localStorage.setItem('comments3', JSON.stringify(comm3))
+                console.log(comm3)
+                let newString3 = ""
+                comm3.forEach(element => {
+                    newString3 += element
+                    newString3 += "<hr>"
+                });
+                document.getElementById("comment3").innerHTML = newString3;
+            }
+
+            let json4 = [];
+                let string4 = "";
+                if (localStorage.getItem('comments4')) {
+                    json4 = JSON.parse(localStorage.getItem('comments4'));
+                    string4 = "";
+                    for (var i = 0; i < json4.length; i++) {
+                        var obj4 = json4[i];
+                        let st4 = JSON.stringify(obj4);
+                        string4 += st4;
+                        string4 += "<hr>";
+                    }
+                }
+                document.getElementById("comment4").innerHTML = string4;
+            
+            function comment4() {
+                event.preventDefault()
+                let t4 = document.getElementById("input4").value;
+                let comm4 = JSON.parse(localStorage.getItem('comments4')) || [];
+                var datum4 = new Date();
+                t4 = guest + ': ' + t4 + '<br>' + datum4.toUTCString();
+                comm4.push(t4)
+                localStorage.setItem('comments4', JSON.stringify(comm4))
+                console.log(comm4)
+                let newString4 = ""
+                comm4.forEach(element => {
+                    newString4 += element
+                    newString4 += "<hr>"
+                });
+                document.getElementById("comment4").innerHTML = newString4;
+              }
+                let json5 = [];
+                let string5 = "";
+                if (localStorage.getItem('comments5')) {
+                    json5 = JSON.parse(localStorage.getItem('comments5'));
+                    string5 = "";
+                    for (var i = 0; i < json5.length; i++) {
+                        var obj5 = json5[i];
+                        let st5 = JSON.stringify(obj5);
+                        string5 += st5;
+                        string5 += "<hr>";
+                    }
+                }
+                document.getElementById("comment5").innerHTML = string5;
+            
+            function comment5() {
+                event.preventDefault()
+                let t5 = document.getElementById("input5").value;
+                let comm5 = JSON.parse(localStorage.getItem('comments5')) || [];
+                var datum5 = new Date();
+                t5 = guest + ': ' + t5 + '<br>' + datum5.toUTCString();
+                comm5.push(t5)
+                localStorage.setItem('comments5', JSON.stringify(comm5))
+                console.log(comm5)
+                let newString5 = ""
+                comm5.forEach(element => {
+                    newString5 += element
+                    newString5 += "<hr>"
+                });
+                document.getElementById("comment5").innerHTML = newString5;
+            }
+
+            let json6 = [];
+                let string6 = "";
+                if (localStorage.getItem('comments6')) {
+                    json6 = JSON.parse(localStorage.getItem('comments6'));
+                    string6 = "";
+                    for (var i = 0; i < json6.length; i++) {
+                        var obj6 = json6[i];
+                        let st6 = JSON.stringify(obj6);
+                        string6 += st6;
+                        string6 += "<hr>";
+                    }
+                }
+                document.getElementById("comment6").innerHTML = string6;
+            
+            function comment6() {
+                event.preventDefault()
+                let t6 = document.getElementById("input6").value;
+                let comm6 = JSON.parse(localStorage.getItem('comments6')) || [];
+                var datum6 = new Date();
+                t6 = guest + ': ' + t6 + '<br>' + datum6.toUTCString();
+                comm6.push(t6)
+                localStorage.setItem('comments6', JSON.stringify(comm6))
+                console.log(comm6)
+                let newString6 = ""
+                comm6.forEach(element => {
+                    newString6 += element
+                    newString6 += "<hr>"
+                });
+                document.getElementById("comment6").innerHTML = newString6;
+            }
+
+            let json7 = [];
+                let string7 = "";
+                if (localStorage.getItem('comments7')) {
+                    json7 = JSON.parse(localStorage.getItem('comments7'));
+                    string7 = "";
+                    for (var i = 0; i < json7.length; i++) {
+                        var obj7 = json7[i];
+                        let st7 = JSON.stringify(obj7);
+                        string7 += st7;
+                        string7 += "<hr>";
+                    }
+                }
+                document.getElementById("comment7").innerHTML = string7;
+            
+            function comment7() {
+                event.preventDefault()
+                let t7 = document.getElementById("input7").value;
+                let comm7 = JSON.parse(localStorage.getItem('comments7')) || [];
+                var datum7 = new Date();
+                t7 = guest + ': ' + t7 + '<br>' + datum7.toUTCString();
+                comm7.push(t7)
+                localStorage.setItem('comments7', JSON.stringify(comm7))
+                console.log(comm7)
+                let newString7 = ""
+                comm7.forEach(element => {
+                    newString7 += element
+                    newString7 += "<hr>"
+                });
+                document.getElementById("comment7").innerHTML = newString7;
+            }
+
+            let json8 = [];
+                let string8 = "";
+                if (localStorage.getItem('comments8')) {
+                    json8 = JSON.parse(localStorage.getItem('comments8'));
+                    string8 = "";
+                    for (var i = 0; i < json8.length; i++) {
+                        var obj8 = json8[i];
+                        let st8 = JSON.stringify(obj8);
+                        string8 += st8;
+                        string8 += "<hr>";
+                    }
+                }
+                document.getElementById("comment8").innerHTML = string8;
+            
+            function comment8() {
+                event.preventDefault()
+                let t8 = document.getElementById("input8").value;
+                let comm8 = JSON.parse(localStorage.getItem('comments8')) || [];
+                var datum8 = new Date();
+                t8 = guest + ': ' + t8 + '<br>' + datum8.toUTCString();
+                comm8.push(t8)
+                localStorage.setItem('comments8', JSON.stringify(comm8))
+                console.log(comm8)
+                let newString8 = ""
+                comm8.forEach(element => {
+                    newString8 += element
+                    newString8 += "<hr>"
+                });
+                document.getElementById("comment8").innerHTML = newString8;
+            }
+
+            let json9 = [];
+                let string9 = "";
+                if (localStorage.getItem('comments9')) {
+                    json9 = JSON.parse(localStorage.getItem('comments9'));
+                    string9 = "";
+                    for (var i = 0; i < json9.length; i++) {
+                        var obj9 = json9[i];
+                        let st9 = JSON.stringify(obj9);
+                        string9 += st9;
+                        string9 += "<hr>";
+                    }
+                }
+                document.getElementById("comment9").innerHTML = string9;
+            
+            function comment9() {
+                event.preventDefault()
+                let t9 = document.getElementById("input9").value;
+                let comm9 = JSON.parse(localStorage.getItem('comments9')) || [];
+                var datum9 = new Date();
+                t9 = guest + ': ' + t9 + '<br>' + datum9.toUTCString();
+                comm9.push(t9)
+                localStorage.setItem('comments9', JSON.stringify(comm9))
+                console.log(comm9)
+                let newString9 = ""
+                comm9.forEach(element => {
+                    newString9 += element
+                    newString9 += "<hr>"
+                });
+                document.getElementById("comment9").innerHTML = newString9;
+            }
+
+            let json10 = [];
+                let string10 = "";
+                if (localStorage.getItem('comments10')) {
+                    json10 = JSON.parse(localStorage.getItem('comments10'));
+                    string10 = "";
+                    for (var i = 0; i < json10.length; i++) {
+                        var obj10 = json10[i];
+                        let st10 = JSON.stringify(obj10);
+                        string10 += st10;
+                        string10 += "<hr>";
+                    }
+                }
+                document.getElementById("comment10").innerHTML = string10;
+            
+            function comment10() {
+                event.preventDefault()
+                let t10 = document.getElementById("input10").value;
+                let comm10 = JSON.parse(localStorage.getItem('comments10')) || [];
+                var datum10 = new Date();
+                t10 = guest + ': ' + t10 + '<br>' + datum10.toUTCString();
+                comm10.push(t10)
+                localStorage.setItem('comments10', JSON.stringify(comm10))
+                console.log(comm10)
+                let newString10 = ""
+                comm10.forEach(element => {
+                    newString10 += element
+                    newString10 += "<hr>"
+                });
+                document.getElementById("comment10").innerHTML = newString10;
+            }
+
+            let json11 = [];
+                let string11 = "";
+                if (localStorage.getItem('comments11')) {
+                    json11 = JSON.parse(localStorage.getItem('comments11'));
+                    string11 = "";
+                    for (var i = 0; i < json11.length; i++) {
+                        var obj11 = json11[i];
+                        let st11 = JSON.stringify(obj11);
+                        string11 += st11;
+                        string11 += "<hr>";
+                    }
+                }
+                document.getElementById("comment11").innerHTML = string11;
+            
+            function comment11() {
+                event.preventDefault()
+                let t11 = document.getElementById("input11").value;
+                let comm11 = JSON.parse(localStorage.getItem('comments11')) || [];
+                var datum11 = new Date();
+                t11 = guest + ': ' + t11 + '<br>' + datum11.toUTCString();
+                comm11.push(t11)
+                localStorage.setItem('comments11', JSON.stringify(comm11))
+                console.log(comm11)
+                let newString11 = ""
+                comm11.forEach(element => {
+                    newString11 += element
+                    newString11 += "<hr>"
+                });
+                document.getElementById("comment11").innerHTML = newString11;
+            }
+
+            let json12 = [];
+                let string12 = "";
+                if (localStorage.getItem('comments12')) {
+                    json12 = JSON.parse(localStorage.getItem('comments12'));
+                    string12 = "";
+                    for (var i = 0; i < json12.length; i++) {
+                        var obj12 = json12[i];
+                        let st12 = JSON.stringify(obj12);
+                        string12 += st12;
+                        string12 += "<hr>";
+                    }
+                }
+                document.getElementById("comment12").innerHTML = string12;
+            
+            function comment12() {
+                event.preventDefault()
+                let t12 = document.getElementById("input12").value;
+                let comm12 = JSON.parse(localStorage.getItem('comments12')) || [];
+                var datum12 = new Date();
+                t12 = guest + ': ' + t12 + '<br>' + datum12.toUTCString();
+                comm12.push(t12)
+                localStorage.setItem('comments12', JSON.stringify(comm12))
+                console.log(comm12)
+                let newString12 = ""
+                comm12.forEach(element => {
+                    newString12 += element
+                    newString12 += "<hr>"
+                });
+                document.getElementById("comment12").innerHTML = newString12;
+            }
